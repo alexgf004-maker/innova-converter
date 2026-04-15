@@ -1,6 +1,6 @@
+
 FROM python:3.11-slim
 
-# Instalar LibreOffice con fuentes básicas
 RUN apt-get update && apt-get install -y \
     libreoffice \
     libreoffice-writer \
@@ -12,8 +12,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY app.py .
+COPY Entrega_de_materiales_OTC_2026.docx .
 
-# Cloud Run usa PORT=8080 por defecto
 ENV PORT=8080
 EXPOSE 8080
 
