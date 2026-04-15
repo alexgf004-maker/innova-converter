@@ -1,8 +1,3 @@
-"""
-innova-converter — Google Cloud Run
-Recibe un .docx en base64, lo convierte a PDF con LibreOffice,
-y devuelve el PDF en base64.
-"""
 import os
 import base64
 import subprocess
